@@ -36,7 +36,7 @@ class _DashboardViewState extends State<DashboardView> {
                 width: 85.w,
                 height: 18.h,
                 child: Image.asset(
-                  'assets/images/png/logo.png',
+                  'assets/pngs/logo.png',
                 )),
             SizedBox(height: 66.h),
 
