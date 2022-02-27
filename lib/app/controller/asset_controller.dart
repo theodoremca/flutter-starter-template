@@ -8,12 +8,14 @@ import 'package:nft/app/api/repository/asset_repo.dart';
 import '../locator.dart';
 
 class AssetController {
-  getRequest(BuildContext context) async {
+  Future<List<Assets>> getRequest(BuildContext context) async {
     final result = await locator.get<AssetRepo>().getRequest();
     final AssetModel _assets = AssetModel.fromJson(json.decode(result));
-    return _assets;
+    return _assets.assets;
   }
 }
+
+
 
 // final assetsProvider = FutureProvider<List<Assets>>((ref) async {
 //   final result = await locator.get<AssetRepo>().getRequest();

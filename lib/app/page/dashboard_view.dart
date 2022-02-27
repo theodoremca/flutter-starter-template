@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nft/app/api/model/asset_model.dart';
 import 'package:nft/app/components/custom_scaffold.dart';
 import 'package:nft/app/components/text_widgets.dart';
 import 'package:nft/app/controller/asset_controller.dart';
@@ -21,8 +22,16 @@ class _DashboardViewState extends State<DashboardView> {
     _getData();
   }
 
+  List<Assets> _assets=[];
+  bool _loading=false;
   Future<void> _getData() async {
-    await locator.get<AssetController>().getRequest(context);
+    setState(() {
+      _loading = true;
+    });
+    _assets = await locator.get<AssetController>().getRequest(context);
+    setState(() {
+      _loading = false;
+    });
   }
 
   @override
@@ -39,9 +48,38 @@ class _DashboardViewState extends State<DashboardView> {
                   'assets/pngs/logo.png',
                 )),
             SizedBox(height: 66.h),
-
+            _loading ? const CircularProgressIndicator.adaptive() : Expanded(
+              child:  _assets.isEmpty ? const SizedBox(): newMethod(),
+            )
           ],
         ));
+  }
+
+  Widget newMethod() {
+    const bool _showCount = !false;
+    return _showCount ? regularText('${_assets.length}',color: Colors.white) : ListView.builder(
+                itemCount: _assets.length,
+                itemBuilder: (context, idx) {
+                  return Card(
+                      textItem1: "${_assets[idx].id}",
+                      textItem2:
+                      "not Avalable",
+                      textItem3:
+                      "Not Available",
+                      textItem4:
+                      "Not Available",
+                      title: _assets[idx].name == null
+                          ? "noot Avalable "
+                          : _assets[idx].name!.toString(),
+                      listText:
+                      "${_assets[idx].assetContract!.owner}",
+                      image:
+                      _assets[idx].imageThumbnailUrl == null
+                          ? 'https://via.placeholder.com/300.png'
+                          : _assets[idx].imageThumbnailUrl!);
+
+
+                });
   }
 }
 
