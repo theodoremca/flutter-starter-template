@@ -6,6 +6,7 @@ import 'package:nft/app/api/model/asset_model.dart';
 import 'package:nft/app/components/custom_scaffold.dart';
 import 'package:nft/app/components/text_widgets.dart';
 import 'package:nft/app/controller/asset_controller.dart';
+import 'package:nft/app/utils/utils.dart';
 
 import '../locator.dart';
 
@@ -56,29 +57,28 @@ class _DashboardViewState extends State<DashboardView> {
   }
 
   Widget newMethod() {
-    const bool _showCount = !false;
-    return _showCount ? regularText('${_assets.length}',color: Colors.white) : ListView.builder(
+    const bool _showCount = false;
+    return ListView.builder(
                 itemCount: _assets.length,
                 itemBuilder: (context, idx) {
-                  return Card(
-                      textItem1: "${_assets[idx].id}",
-                      textItem2:
-                      "not Avalable",
-                      textItem3:
-                      "Not Available",
-                      textItem4:
-                      "Not Available",
-                      title: _assets[idx].name == null
-                          ? "noot Avalable "
-                          : _assets[idx].name!.toString(),
-                      listText:
-                      "${_assets[idx].assetContract!.owner}",
-                      image:
-                      _assets[idx].imageThumbnailUrl == null
-                          ? 'https://via.placeholder.com/300.png'
-                          : _assets[idx].imageThumbnailUrl!);
-
-
+                  String _id = _assets[idx].id.toString();
+                  String _owner = _assets[idx].assetContract!.owner.toString();
+                  String _image = _assets[idx].imageThumbnailUrl == null
+                      ? 'https://via.placeholder.com/300.png'
+                      : _assets[idx].imageThumbnailUrl.toString();
+                  String _name =_assets[idx].name == null
+                      ? "noot Avalable "
+                      : _assets[idx].name!.toString();
+                  String _basisPoints = _assets[idx].assetContract!.openseaSellerFeeBasisPoints!.toString();
+                  return   _showCount ? Column(
+                    children: [
+                      regularText(_id,color: Colors.white),
+                      regularText(_owner,color: Colors.white),
+                      regularText(_image,color: Colors.white),
+                      regularText(_name,color: Colors.white),
+                      regularText(_basisPoints,color: Colors.white),
+                    ],
+                  ) : Card(title: _name, textItem1: _id, textItem2: _owner, textItem3: _basisPoints, textItem4: _basisPoints, listText: _id, image: _image);
                 });
   }
 }
@@ -92,9 +92,7 @@ class Card extends StatelessWidget {
     required this.textItem3,
     required this.textItem4,
     required this.listText,
-    this.image =
-    "https://lh3.googleusercontent.com/IdiZIxUEj5zaR4vIPlQJboqNcjPcf0nPgNSgVKGbiby8yYOnOS9zxmar9JeieGr0x9e5s06QDlsXbZQjz5q-kPz78As_shxsds0-=s250",
-  }) : super(key: key);
+    required  this.image}) : super(key: key);
   final String title;
   final String textItem1;
   final String textItem2;
@@ -117,14 +115,14 @@ class Card extends StatelessWidget {
                   height: 167.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0x3f000000),
                         blurRadius: 4,
                         offset: Offset(0, 4),
                       ),
                     ],
-                    color: Color(0xff383838),
+                    color: const Color(0xff383838),
                   ),
                 )),
             Padding(
@@ -138,7 +136,7 @@ class Card extends StatelessWidget {
                         width: 98.w,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Color(0x3f000000),
                               blurRadius: 4,
@@ -186,7 +184,7 @@ class Card extends StatelessWidget {
                     padding: EdgeInsets.only(left: 20.h),
                     child: Column(
                       children: [
-                        regularText(title.substring(0,20),
+                        regularText(Utils.subString(title,start: 0,end: 20),
                             fontSize: 14,
                             letterSpacing:
                             0 /*percentages not used in flutter. defaulting to zero*/,
@@ -201,7 +199,7 @@ class Card extends StatelessWidget {
                             ItemCard(text: textItem1, label: 'id'),
                             SizedBox(width: 20.h),
                             ItemCard(
-                                text: textItem2.substring(0, 10),
+                                text: Utils.subString(textItem2,start:0,end:10),
                                 label: 'Item'),
                           ],
                         ),
@@ -242,14 +240,14 @@ class ItemCard extends StatelessWidget {
       height: 47.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color(0x3f000000),
             blurRadius: 4,
             offset: Offset(0, 4),
           ),
         ],
-        color: Color(0xff6b6b6b),
+        color: const Color(0xff6b6b6b),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -281,3 +279,6 @@ class ItemCard extends StatelessWidget {
     );
   }
 }
+
+
+
