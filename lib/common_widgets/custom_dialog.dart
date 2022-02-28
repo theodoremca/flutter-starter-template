@@ -1,6 +1,5 @@
-
-import 'package:calenbine/common_widgets/text_widgets.dart';
-import 'package:calenbine/utils/colors.dart';
+import 'package:template/common_widgets/text_widgets.dart';
+import 'package:template/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomDialog extends StatelessWidget {
@@ -19,7 +18,8 @@ class CustomDialog extends StatelessWidget {
       this.primary,
       this.secondary,
       this.primaryAction,
-      this.secondaryAction, this.primaryColor})
+      this.secondaryAction,
+      this.primaryColor})
       : super(key: key);
 
   @override
@@ -62,8 +62,9 @@ class CustomDialog extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(horizontal: 12.h, vertical: 6.h),
                     decoration: BoxDecoration(
-                      color:primaryColor ?? AppColors.btnRed,
-                      border: Border.all(color:primaryColor ??  AppColors.btnRed),
+                      color: primaryColor ?? AppColors.btnRed,
+                      border:
+                          Border.all(color: primaryColor ?? AppColors.btnRed),
                       borderRadius: BorderRadius.circular(6.h),
                     ),
                     child: regularText(

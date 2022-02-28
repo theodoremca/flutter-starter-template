@@ -1,9 +1,8 @@
-import 'package:calenbine/common_widgets/text_widgets.dart';
-import 'package:calenbine/utils/colors.dart';
+import 'package:template/common_widgets/text_widgets.dart';
+import 'package:template/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;
@@ -107,10 +106,10 @@ class CustomTextField extends StatelessWidget {
             readOnly: readOnly,
             decoration: InputDecoration(
               counterText: '',
-              contentPadding:   EdgeInsets.all(15.h),
+              contentPadding: EdgeInsets.all(15.h),
               hintText: hintText,
               hintStyle: GoogleFonts.rubik(
-                color:isCreate ? AppColors.black: AppColors.grey,
+                color: isCreate ? AppColors.black : AppColors.grey,
                 fontSize: 17.sp,
                 fontWeight: FontWeight.w400,
               ),

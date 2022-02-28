@@ -1,4 +1,4 @@
-import 'package:calenbine/common_widgets/text_widgets.dart';
+import 'package:template/common_widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,8 +1,7 @@
 import 'package:another_flushbar/flushbar.dart';
-import 'package:calenbine/common_widgets/text_widgets.dart';
-import 'package:calenbine/utils/colors.dart';
+import 'package:template/common_widgets/text_widgets.dart';
+import 'package:template/utils/colors.dart';
 import 'package:flutter/material.dart';
-
 
 void errorSnackBar(BuildContext context, String title) {
   final Flushbar<void> flushBar = Flushbar<void>(

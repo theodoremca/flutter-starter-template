@@ -1,8 +1,7 @@
-import 'package:calenbine/common_widgets/text_widgets.dart';
-import 'package:calenbine/utils/colors.dart';
-import 'package:calenbine/utils/utils.dart';
+import 'package:template/common_widgets/text_widgets.dart';
+import 'package:template/utils/colors.dart';
+import 'package:template/utils/utils.dart';
 import 'package:flutter/material.dart';
-
 
 class CustomScaffold extends StatelessWidget {
   const CustomScaffold({

@@ -1,7 +1,6 @@
-import 'package:calenbine/common_widgets/text_widgets.dart';
-import 'package:calenbine/utils/colors.dart';
+import 'package:template/common_widgets/text_widgets.dart';
+import 'package:template/utils/colors.dart';
 import 'package:flutter/material.dart';
-
 
 class MessageBubble extends StatelessWidget {
   const MessageBubble(
@@ -21,7 +20,7 @@ class MessageBubble extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-         if (isSender)   Expanded(child: SizedBox( )),
+          if (isSender) Expanded(child: SizedBox()),
           if (!isSender)
             Padding(
               padding: EdgeInsets.only(right: 12.h),
@@ -50,7 +49,8 @@ class MessageBubble extends StatelessWidget {
                       color: AppColors.black,
                       fontWeight: FontWeight.w600,
                       usernameColor: Color(0xffFFA384),
-                    ),Spacer(),
+                    ),
+                    Spacer(),
                     regularText(
                       'Friday 2:20pm',
                       fontSize: 13.sp,
@@ -62,7 +62,6 @@ class MessageBubble extends StatelessWidget {
                   margin: EdgeInsets.symmetric(vertical: 8.h),
                   padding:
                       EdgeInsets.symmetric(horizontal: 14.h, vertical: 10.h),
-
                   decoration: BoxDecoration(
                     color: isSender ? Color(0xff74BDCB) : Color(0xffFFFF1E2),
                     borderRadius: BorderRadius.only(
@@ -95,7 +94,6 @@ class MessageBubble extends StatelessWidget {
               ],
             ),
           ),
-
         ],
       ),
     );

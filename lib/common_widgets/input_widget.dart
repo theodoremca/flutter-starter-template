@@ -1,19 +1,18 @@
-import 'package:calenbine/common_widgets/text_widgets.dart';
-import 'package:calenbine/utils/colors.dart';
+import 'package:template/common_widgets/text_widgets.dart';
+import 'package:template/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 class InputWidget extends StatefulWidget {
   const InputWidget({
     required this.controller,
     required this.onSentMessage,
-   });
+  });
 
   final TextEditingController controller;
 
-   final ValueChanged<String> onSentMessage;
+  final ValueChanged<String> onSentMessage;
 
   @override
   _InputWidgetState createState() => _InputWidgetState();
@@ -89,7 +88,7 @@ class _InputWidgetState extends State<InputWidget> {
           borderRadius: BorderRadius.circular(30.h),
         ),
         controller: widget.controller,
-         enabled: !addingFile,
+        enabled: !addingFile,
         placeholder: 'Message',
         placeholderStyle: GoogleFonts.rubik(
           color: AppColors.grey,

@@ -1,4 +1,4 @@
-import 'package:calenbine/app/page/splash_screen.dart';
+import 'package:template/app/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
