@@ -1,4 +1,4 @@
-package com.nft.app.nft
+package com.calenbine.app
 
 import io.flutter.embedding.android.FlutterActivity
 

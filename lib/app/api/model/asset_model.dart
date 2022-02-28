@@ -3,14 +3,14 @@ class AssetModel {
     required this.assets,
   });
   late final List<Assets> assets;
-  
-  AssetModel.fromJson(Map<String, dynamic> json){
-    assets = List.from(json['assets']).map((e)=>Assets.fromJson(e)).toList();
+
+  AssetModel.fromJson(Map<String, dynamic> json) {
+    assets = List.from(json['assets']).map((e) => Assets.fromJson(e)).toList();
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-    _data['assets'] = assets.map((e)=>e.toJson()).toList();
+    _data['assets'] = assets.map((e) => e.toJson()).toList();
     return _data;
   }
 }
@@ -19,31 +19,31 @@ class Assets {
   Assets({
     required this.id,
     required this.numSales,
-     this.backgroundColor,
+    this.backgroundColor,
     required this.imageUrl,
-     this.imagePreviewUrl,
-     this.imageThumbnailUrl,
-     this.imageOriginalUrl,
-     this.animationUrl,
-     this.animationOriginalUrl,
-     this.name,
-     this.description,
-     this.externalLink,
+    this.imagePreviewUrl,
+    this.imageThumbnailUrl,
+    this.imageOriginalUrl,
+    this.animationUrl,
+    this.animationOriginalUrl,
+    this.name,
+    this.description,
+    this.externalLink,
     required this.assetContract,
     required this.permalink,
     required this.collection,
-     this.decimals,
-     this.tokenMetadata,
+    this.decimals,
+    this.tokenMetadata,
     required this.owner,
-     this.sellOrders,
+    this.sellOrders,
     required this.creator,
     required this.traits,
-     this.lastSale,
-     this.topBid,
-     this.listingDate,
+    this.lastSale,
+    this.topBid,
+    this.listingDate,
     required this.isPresale,
-     this.transferFeePaymentToken,
-     this.transferFee,
+    this.transferFeePaymentToken,
+    this.transferFee,
     required this.tokenId,
   });
   late final int? id;
@@ -74,8 +74,8 @@ class Assets {
   late final Null? transferFeePaymentToken;
   late final Null? transferFee;
   late final String? tokenId;
-  
-  Assets.fromJson(Map<String, dynamic> json){
+
+  Assets.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     // numSales = json['num_sales'];
     // backgroundColor = null;
@@ -96,7 +96,7 @@ class Assets {
     // owner = Owner.fromJson(json['owner']);
     // sellOrders = null;
     // creator = json['creator'] == null ? null: Creator.fromJson(json['creator']);
-    traits = List.from(json['traits']).map((e)=>Traits.fromJson(e)).toList();
+    traits = List.from(json['traits']).map((e) => Traits.fromJson(e)).toList();
     // lastSale = null;
     // topBid = null;
     // listingDate = null;
@@ -128,7 +128,7 @@ class Assets {
     _data['owner'] = owner!.toJson();
     _data['sell_orders'] = sellOrders;
     _data['creator'] = creator!.toJson();
-    _data['traits'] = traits!.map((e)=>e!.toJson()).toList();
+    _data['traits'] = traits!.map((e) => e!.toJson()).toList();
     _data['last_sale'] = lastSale;
     _data['top_bid'] = topBid;
     _data['listing_date'] = listingDate;
@@ -146,15 +146,15 @@ class AssetContract {
     required this.assetContractType,
     required this.createdDate,
     required this.name,
-     this.nftVersion,
-     this.openseaVersion,
+    this.calenbineVersion,
+    this.openseaVersion,
     required this.owner,
     required this.schemaName,
     required this.symbol,
-     this.totalSupply,
+    this.totalSupply,
     required this.description,
-     this.externalLink,
-     this.imageUrl,
+    this.externalLink,
+    this.imageUrl,
     required this.defaultToFiat,
     required this.devBuyerFeeBasisPoints,
     required this.devSellerFeeBasisPoints,
@@ -163,13 +163,13 @@ class AssetContract {
     required this.openseaSellerFeeBasisPoints,
     required this.buyerFeeBasisPoints,
     required this.sellerFeeBasisPoints,
-     this.payoutAddress,
+    this.payoutAddress,
   });
   late final String? address;
   late final String? assetContractType;
   late final String? createdDate;
   late final String? name;
-  late final String? nftVersion;
+  late final String? calenbineVersion;
   late final String? openseaVersion;
   late final int? owner;
   late final String? schemaName;
@@ -187,13 +187,13 @@ class AssetContract {
   late final int? buyerFeeBasisPoints;
   late final int? sellerFeeBasisPoints;
   late final String? payoutAddress;
-  
-  AssetContract.fromJson(Map<String, dynamic> json){
+
+  AssetContract.fromJson(Map<String, dynamic> json) {
     address = json['address'];
     assetContractType = json['asset_contract_type'];
     createdDate = json['created_date'];
     name = json['name'];
-    nftVersion = null;
+    calenbineVersion = null;
     openseaVersion = null;
     owner = json['owner'];
     schemaName = json['schema_name'];
@@ -219,7 +219,7 @@ class AssetContract {
     _data['asset_contract_type'] = assetContractType;
     _data['created_date'] = createdDate;
     _data['name'] = name;
-    _data['nft_version'] = nftVersion;
+    _data['calenbine_version'] = calenbineVersion;
     _data['opensea_version'] = openseaVersion;
     _data['owner'] = owner;
     _data['schema_name'] = schemaName;
@@ -244,35 +244,35 @@ class AssetContract {
 class Collection {
   Collection({
     required this.bannerImageUrl,
-     this.chatUrl,
+    this.chatUrl,
     required this.createdDate,
     required this.defaultToFiat,
     required this.description,
     required this.devBuyerFeeBasisPoints,
     required this.devSellerFeeBasisPoints,
-     this.discordUrl,
+    this.discordUrl,
     required this.displayData,
-     this.externalUrl,
+    this.externalUrl,
     required this.featured,
-     this.featuredImageUrl,
+    this.featuredImageUrl,
     required this.hidden,
     required this.safelistRequestStatus,
     required this.imageUrl,
     required this.isSubjectToWhitelist,
-     this.largeImageUrl,
-     this.mediumUsername,
+    this.largeImageUrl,
+    this.mediumUsername,
     required this.name,
     required this.onlyProxiedTransfers,
     required this.openseaBuyerFeeBasisPoints,
     required this.openseaSellerFeeBasisPoints,
     required this.payoutAddress,
     required this.requireEmail,
-     this.shortDescription,
+    this.shortDescription,
     required this.slug,
-     this.telegramUrl,
-     this.twitterUsername,
-     this.instagramUsername,
-     this.wikiUrl,
+    this.telegramUrl,
+    this.twitterUsername,
+    this.instagramUsername,
+    this.wikiUrl,
   });
   late final String? bannerImageUrl;
   late final Null? chatUrl;
@@ -292,7 +292,7 @@ class Collection {
   late final bool? isSubjectToWhitelist;
   late final String? largeImageUrl;
   late final Null? mediumUsername;
-  late final String ?name;
+  late final String? name;
   late final bool? onlyProxiedTransfers;
   late final String? openseaBuyerFeeBasisPoints;
   late final String? openseaSellerFeeBasisPoints;
@@ -304,8 +304,8 @@ class Collection {
   late final Null twitterUsername;
   late final String? instagramUsername;
   late final Null wikiUrl;
-  
-  Collection.fromJson(Map<String, dynamic> json){
+
+  Collection.fromJson(Map<String, dynamic> json) {
     bannerImageUrl = json['banner_image_url'];
     chatUrl = null;
     createdDate = json['created_date'];
@@ -379,8 +379,8 @@ class DisplayData {
     required this.cardDisplayStyle,
   });
   late final String cardDisplayStyle;
-  
-  DisplayData.fromJson(Map<String, dynamic> json){
+
+  DisplayData.fromJson(Map<String, dynamic> json) {
     cardDisplayStyle = json['card_display_style'];
   }
 
@@ -402,9 +402,9 @@ class Owner {
   late final String profileImgUrl;
   late final String address;
   late final String config;
-  
-  Owner.fromJson(Map<String, dynamic> json){
-    user = User.fromJson(json['user']==null?{}:json['user']);
+
+  Owner.fromJson(Map<String, dynamic> json) {
+    user = User.fromJson(json['user'] == null ? {} : json['user']);
     profileImgUrl = json['profile_img_url'];
     address = json['address'];
     config = json['config'];
@@ -422,11 +422,11 @@ class Owner {
 
 class User {
   User({
-     this.username,
+    this.username,
   });
   late final String? username;
-  
-  User.fromJson(Map<String, dynamic> json){
+
+  User.fromJson(Map<String, dynamic> json) {
     username = null;
   }
 
@@ -448,9 +448,9 @@ class Creator {
   late final String profileImgUrl;
   late final String address;
   late final String config;
-  
-  Creator.fromJson(Map<String, dynamic> json){
-    user = json['user'] == null ? null: User.fromJson(json['user']);
+
+  Creator.fromJson(Map<String, dynamic> json) {
+    user = json['user'] == null ? null : User.fromJson(json['user']);
     profileImgUrl = json['profile_img_url'];
     address = json['address'];
     config = json['config'];
@@ -470,10 +470,10 @@ class Traits {
   Traits({
     required this.traitType,
     required this.value,
-     this.displayType,
-     this.maxValue,
+    this.displayType,
+    this.maxValue,
     required this.traitCount,
-     this.order,
+    this.order,
   });
   late final String traitType;
   late final dynamic value;
@@ -481,8 +481,8 @@ class Traits {
   late final Null maxValue;
   late final int traitCount;
   late final Null order;
-  
-  Traits.fromJson(Map<String, dynamic> json){
+
+  Traits.fromJson(Map<String, dynamic> json) {
     // traitType = json['trait_type'];
     // value = json['value'];
     // displayType = null;

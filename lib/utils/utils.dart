@@ -3,10 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 
-import 'country_cities.dart';
-
 class Utils {
   static bool production = !false;
+
   static void offKeyboard() async {
     await SystemChannels.textInput.invokeMethod<dynamic>('TextInput.hide');
   }
@@ -44,13 +43,11 @@ class Utils {
   static String todaysDate( ) {
     return DateFormat('MMMM dd').format(DateTime.now());
   }
-
   static String subString(String string,{int? start, int? end}) {
     int _start = start ?? 0;
     int _end = string.length-1>(end??string.length)?end??string.length:string.length;
     return   string.substring(_start,_end);
   }
-
   static String toDate(String date) {
 
     return DateFormat('MMMM dd').format(DateTime.parse(date));

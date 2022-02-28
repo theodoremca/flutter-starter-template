@@ -1,7 +1,5 @@
-
-import 'package:nft/app/page/splash_screen.dart';
+import 'package:calenbine/app/page/splash_screen.dart';
 import 'package:flutter/material.dart';
-
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key, required this.title}) : super(key: key);
@@ -9,11 +7,10 @@ class LandingPage extends StatefulWidget {
   @override
   State<LandingPage> createState() => _LandingPageState();
 }
+
 class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SplashScreen()
-    );
+    return const Scaffold(body: SplashScreen());
   }
 }

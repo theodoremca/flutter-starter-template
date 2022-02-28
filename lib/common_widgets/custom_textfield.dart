@@ -1,8 +1,9 @@
+import 'package:calenbine/common_widgets/text_widgets.dart';
+import 'package:calenbine/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nft/app/components/text_widgets.dart';
-import 'package:nft/app/utils/colors.dart';
+
 
 class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;

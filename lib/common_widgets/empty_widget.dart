@@ -1,9 +1,9 @@
+import 'package:calenbine/common_widgets/text_widgets.dart';
+import 'package:calenbine/utils/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:nft/app/components/text_widgets.dart';
-import 'package:nft/app/utils/colors.dart';
 
 
-import 'buttons.dart';
+import '../common_widgets/buttons.dart';
 
 class AppEmptyWidget extends StatelessWidget {
   const AppEmptyWidget(this.title, this.desc, {this.onTap});

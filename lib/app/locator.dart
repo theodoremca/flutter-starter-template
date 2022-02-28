@@ -1,17 +1,14 @@
-
-
 import 'package:get_it/get_it.dart';
-import 'package:nft/app/controller/asset_controller.dart';
+import 'package:calenbine/app/controller/asset_controller.dart';
 
 import 'api/repository/asset_repo.dart';
 
 final GetIt locator = GetIt.instance;
-void setUp () {
+void setUp() {
   locator.registerLazySingleton<AssetRepo>(
-        () => AssetRepo(),
+    () => AssetRepo(),
   );
   locator.registerLazySingleton<AssetController>(
-        () => AssetController(),
+    () => AssetController(),
   );
-
 }

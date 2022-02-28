@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,8 +13,7 @@ Widget regularText(String text,
     int? maxLines,
     TextOverflow? overflow,
     TextDecoration? decoration,
-    FontWeight? fontWeight
-    }) {
+    FontWeight? fontWeight}) {
   return Text(
           text,
           textAlign: textAlign,
@@ -45,7 +45,7 @@ Widget userNameText(
   bool blur = false,
   Color? usernameColor,
 }) {
-  return Row(
+  return  Row(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [

@@ -1,7 +1,7 @@
+import 'package:calenbine/common_widgets/text_widgets.dart';
+import 'package:calenbine/utils/colors.dart';
+import 'package:calenbine/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:nft/app/components/text_widgets.dart';
-import 'package:nft/app/utils/colors.dart';
-import 'package:nft/app/utils/utils.dart';
 
 
 class CustomScaffold extends StatelessWidget {
@@ -43,7 +43,7 @@ class CustomScaffold extends StatelessWidget {
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.arrow_back_rounded,
                               color: AppColors.black,
                             ),

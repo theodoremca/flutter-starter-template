@@ -1,6 +1,6 @@
+import 'package:calenbine/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:nft/app/utils/colors.dart';
 import 'text_widgets.dart';
 
 class FloatingNavBar extends StatefulWidget {

@@ -3,5 +3,5 @@
 class Endpoint {
   static String locationIndex = "location/index";
   static String categoryIndex = "category/index";
-  static String index = "https://nft.herokuapp.com/";
+  static String index = "https://calenbine.herokuapp.com/";
 }

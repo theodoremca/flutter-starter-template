@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nft/app/page/dashboard_view.dart';
+import 'package:calenbine/app/page/dashboard_view.dart';
 import 'package:proste_route_animation/proste_route_animation.dart';
-
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,8 +9,6 @@ class SplashScreen extends StatefulWidget {
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
-
-
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
@@ -31,15 +28,12 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _goToOnMain(context) =>
       Navigator.of(context).pushReplacement(ProsteRouteAnimation.slideRoute(
-          route: DashboardView(),
-          mode: ProsteSlideMode.fromRight
-      ));
+          route: DashboardView(), mode: ProsteSlideMode.fromRight));
 
   @override
   void initState() {
-    Future.delayed(const Duration(milliseconds: 3000),()=> _goToOnMain(context));
+    Future.delayed(
+        const Duration(milliseconds: 3000), () => _goToOnMain(context));
     super.initState();
   }
 }
-
-

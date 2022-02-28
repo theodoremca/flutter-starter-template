@@ -1,9 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
-import 'package:nft/app/api/model/asset_model.dart';
-import 'package:nft/app/api/repository/asset_repo.dart';
-
+import 'package:calenbine/app/api/model/asset_model.dart';
+import 'package:calenbine/app/api/repository/asset_repo.dart';
 
 import '../locator.dart';
 

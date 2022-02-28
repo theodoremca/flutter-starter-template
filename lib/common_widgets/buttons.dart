@@ -1,7 +1,6 @@
+import 'package:calenbine/common_widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nft/app/components/text_widgets.dart';
-
 
 Widget buttonWithBorder(
   String text, {
@@ -37,7 +36,7 @@ Widget buttonWithBorder(
       child: Center(
           child: busy
               ? SizedBox(
-                  child: CircularProgressIndicator(
+                  child: const CircularProgressIndicator(
                     strokeWidth: 3,
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
