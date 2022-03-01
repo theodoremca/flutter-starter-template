@@ -1,11 +1,15 @@
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget regularText(String text,
-    {Color? color,
+    {
+      Color? color,
+      Color? dMColor,
+      bool dMode=false,
     double? fontSize = 14,
     double? letterSpacing,
     double? height,
@@ -20,8 +24,8 @@ Widget regularText(String text,
           maxLines: maxLines,
           overflow: overflow,
           softWrap: true,
-          style: GoogleFonts.roboto(
-            color: color,
+          style: GoogleFonts.manrope(
+            color: dMode?dMColor:color,
             letterSpacing: letterSpacing,
             fontSize: fontSize,
             height: height,
@@ -55,7 +59,7 @@ Widget userNameText(
               maxLines: maxLines,
               overflow: overflow,
               softWrap: true,
-              style: GoogleFonts.rubik(
+              style: GoogleFonts.manrope(
                 color: color,
                 letterSpacing: letterSpacing,
                 fontSize: fontSize,
@@ -75,4 +79,21 @@ Widget userNameText(
               ),
           ],
         );
+}
+
+
+TextSpan regularTextSpan(text,{Color? color,
+  Color? dMColor,
+  bool dMode=false,
+  double fontSize=13,FontWeight fontWeight=FontWeight.w500,List<InlineSpan>? children}) {
+  return TextSpan(
+    text: text,
+    style: GoogleFonts.manrope(
+      color: dMode?dMColor:color,
+      fontSize: fontSize.sp,
+      fontWeight: fontWeight,
+    ),
+    recognizer: TapGestureRecognizer()..onTap = () {},
+    children: children,
+  );
 }

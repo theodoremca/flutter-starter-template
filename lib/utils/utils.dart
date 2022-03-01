@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:proste_route_animation/proste_route_animation.dart';
 
 
 class Utils {
@@ -60,4 +61,7 @@ class Utils {
     }
     currentFocus.unfocus();
   }
+  static void goTo(context,Widget page) =>
+      Navigator.of(context).pushReplacement(ProsteRouteAnimation.slideRoute(
+          route: page, mode: ProsteSlideMode.fromRight));
 }
