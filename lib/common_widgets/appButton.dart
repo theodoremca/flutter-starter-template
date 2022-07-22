@@ -1,4 +1,4 @@
-import 'package:calenbine/app/top_level_providers/dark_mode.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +16,8 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Consumer(
   builder: (context, provider, child) {
-  return provider.watch(darkModeProvider)? UnicornButton(text, onTap: onTap):  FilledButton(text, onTap: onTap);
+  return  UnicornButton(text, onTap: onTap);
+  // :  FilledButton(text, onTap: onTap);
   },
 );
   }

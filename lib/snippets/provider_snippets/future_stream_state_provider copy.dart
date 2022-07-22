@@ -1,4 +1,4 @@
-import 'package:template/services/rest/api_helpers/api_base_helper.dart';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -33,6 +33,7 @@ class MyHomePage extends ConsumerWidget {
 }
 
 final myProvider = FutureProvider.autoDispose((ref) async {
+    final Dio dio = Dio();
   // An object from package:dio that allows cancelling http requests
   final cancelToken = CancelToken();
   // When the provider is destroyed, cancel the http request

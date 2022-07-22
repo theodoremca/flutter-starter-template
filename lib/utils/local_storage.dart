@@ -1,8 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
 const String kUserBox = 'userBox';
-const String isFirst = 'isFirsterterrtt';
-const String filledProfileKey = 'use-pinhffhf';
+const String isFirst = 'isFirstTime';
 
 class AppCache {
   static Future<void> init() async {
@@ -12,23 +11,24 @@ class AppCache {
 
   static Box<dynamic> get _userBox => Hive.box<dynamic>(kUserBox);
 
-  static void haveFirstView() {
+  static void setFirstTime() {
     _userBox.put(isFirst, false);
   }
 
-  static bool getIsFirst() {
+  static bool getIsFirstTime() {
     final bool data = _userBox.get(isFirst, defaultValue: true);
     return data;
   }
 
-  static void setFilledProfile(bool key) {
-    _userBox.put(filledProfileKey, key);
+  static void setToken() {
+    _userBox.put(isFirst, false);
   }
 
-  static bool getFilledProfile() {
-    final bool data = _userBox.get(filledProfileKey, defaultValue: false);
+  static bool getToken() {
+    final bool data = _userBox.get(isFirst, defaultValue: true);
     return data;
   }
+
 
   static Future<void> clear() async {
     await _userBox.clear();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:proste_route_animation/proste_route_animation.dart';
 
-import 'dashboard_view.dart';
+import 'public_view.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -28,14 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  void _goToOnMain(context) =>
-      Navigator.of(context).pushReplacement(ProsteRouteAnimation.slideRoute(
-          route: const DashboardView(), mode: ProsteSlideMode.fromRight));
-
   @override
   void initState() {
-    Future.delayed(
-        const Duration(milliseconds: 3000), () => _goToOnMain(context));
     super.initState();
   }
 }

@@ -16,4 +16,7 @@ class AppColors {
   static const Color green = Color(0xff74BDCB);
   static const Color darkGreen = Color(0xff027A48);
   static const Color lightGreen = Color(0xffD1FADF);
+    static const Color primary = Color(0xff027A48);
+  static const Color secondary = Color(0xffD1FADF);
+    static const List<Color> appGradient = [primary,secondary];
 }
