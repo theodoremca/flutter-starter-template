@@ -2,13 +2,13 @@ import 'dart:developer';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:template/app/private_view_1.dart';
-import 'package:template/app/splash_screen.dart';
-import 'package:template/locator.dart';
-import 'package:template/services/common/firebase_auth_service.dart';
-import 'package:template/services/common/firestore_database.dart';
-import 'package:template/services/common/firestore_path.dart';
-import 'package:template/utils/async_value_widget.dart';
+import 'package:fsk/app/private_view_1.dart';
+import 'package:fsk/app/splash_screen.dart';
+import 'package:fsk/locator.dart';
+import 'package:fsk/services/common/firebase_auth_service.dart';
+import 'package:fsk/services/common/firestore_database.dart';
+import 'package:fsk/services/common/firestore_path.dart';
+import 'package:fsk/utils/async_value_widget.dart';
 
 import 'app/models/user.dart';
 

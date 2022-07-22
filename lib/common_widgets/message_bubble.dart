@@ -1,5 +1,5 @@
-import 'package:template/common_widgets/text_widgets.dart';
-import 'package:template/utils/colors.dart';
+import 'package:fsk/common_widgets/text_widgets.dart';
+import 'package:fsk/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class MessageBubble extends StatelessWidget {

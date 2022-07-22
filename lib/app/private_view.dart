@@ -1,5 +1,5 @@
-import 'package:template/common_widgets/custom_scaffold.dart';
-import 'package:template/common_widgets/text_widgets.dart';
+import 'package:fsk/common_widgets/custom_scaffold.dart';
+import 'package:fsk/common_widgets/text_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

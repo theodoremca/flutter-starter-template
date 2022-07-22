@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1020703669703",
+    "project_id": "flutter-starter-kit-3540e",
+    "storage_bucket": "flutter-starter-kit-3540e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020703669703:android:45daf0082cd7decf8dede2",
+        "android_client_info": {
+          "package_name": "com.fsk.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020703669703-eo2f670hjo127sflkias7r3vmbtg8142.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fsk.app",
+            "certificate_hash": "f03f4c4a53ce640d74f098b08c5e1afdeadf6bc9"
+          }
+        },
+        {
+          "client_id": "1020703669703-8tfp977ldih7vehjjm9013v9iqpd7ekq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsSwHUatj9zSw6LT5wGSL9dmrazl7hIoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020703669703-8tfp977ldih7vehjjm9013v9iqpd7ekq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1020703669703-3rnr6a9v29uqd4onppm7d656fi4aib8l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fsk.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

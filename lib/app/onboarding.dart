@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template/utils/colors.dart';
+import 'package:fsk/utils/colors.dart';
 
 import '../utils/local_storage.dart';
 
@@ -179,6 +178,7 @@ class Dots extends StatelessWidget {
         ));
   }
 }
+
 String mainIntroPath = 'assets/images/intro';
 String introImg1 = '$mainIntroPath/intro_img1.png';
 String introImg2 = '$mainIntroPath/intro_img2.png';

@@ -1,12 +1,9 @@
-
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:template/app/private_view.dart';
-import 'package:template/app/private_view_1.dart';
-import 'package:template/app/public_view.dart';
-import 'package:template/app/splash_screen.dart';
-
+import 'package:fsk/app/private_view.dart';
+import 'package:fsk/app/private_view_1.dart';
+import 'package:fsk/app/public_view.dart';
+import 'package:fsk/app/splash_screen.dart';
 
 import 'app/onboarding.dart';
 import 'authenticated_user_landing.dart';

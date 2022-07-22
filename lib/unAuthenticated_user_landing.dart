@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:template/app/splash_screen.dart';
+import 'package:fsk/app/splash_screen.dart';
 
 final screen = StateProvider<Widget>((ref) => const SplashScreen());
 

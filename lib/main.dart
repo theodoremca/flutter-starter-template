@@ -8,10 +8,10 @@ import 'package:flutter_web_frame/flutter_web_frame.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:template/firebase_options.dart';
-import 'package:template/locator.dart';
-import 'package:template/router.dart';
-import 'package:template/utils/local_storage.dart';
+import 'package:fsk/firebase_options.dart';
+import 'package:fsk/locator.dart';
+import 'package:fsk/router.dart';
+import 'package:fsk/utils/local_storage.dart';
 
 import 'services/common/shared_preferences_service.dart';
 
