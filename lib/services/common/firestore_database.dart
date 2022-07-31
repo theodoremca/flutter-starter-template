@@ -7,9 +7,6 @@ import 'firestore_service.dart';
 String documentIdFromCurrentDate() => DateTime.now().toIso8601String();
 
 class FirestoreDatabase<T> {
-  // FirestoreDatabase({required this.uid});
-  // final String uid;
-
   final _service = FirestoreService.instance;
 
   Future<void> setData(
@@ -20,7 +17,7 @@ class FirestoreDatabase<T> {
         data: data,
       );
 
-  Future<void> addData(
+  Future<String> addData(
           {required String pathToCollection,
           required Map<String, dynamic> data}) =>
       _service.addData(
@@ -35,6 +32,15 @@ class FirestoreDatabase<T> {
     await _service.deleteData(path: path);
   }
 
+  Future<T?> getDoc(
+          {required String pathToDocument,
+          required T Function(Map<String, dynamic>? data, String documentID)
+              modelFromData}) =>
+      _service.getDocument(
+        path: pathToDocument,
+        builder: modelFromData,
+      );
+
   Stream<T?> docStream(
           {required String pathToDocument,
           required T Function(Map<String, dynamic>? data, String documentID)
@@ -46,22 +52,35 @@ class FirestoreDatabase<T> {
 
   Stream<List<T>> collectionStream(
           {required String pathToCollection,
-          required String id,
-          required T modelFromData}) =>
+          required T Function(Map<String, dynamic>? data, String documentID)
+              modelFromData}) =>
       _service.collectionStream(
-        path: '$T',
-        builder: (data, documentId) => modelFromData,
+        path: pathToCollection,
+        builder: modelFromData,
       );
   Stream<List<T>> collectionStreamWithQuery(
-          {required String id,
-          required String pathToCollection,
-          required T modelFromData,
+          {required String pathToCollection,
+          required T Function(Map<String, dynamic>? data, String documentID)
+              modelFromData,
           Query<Map<String, dynamic>>? Function(Query<Map<String, dynamic>>)?
               query}) =>
       _service.collectionStream<T>(
-        path: '$T',
+        path: pathToCollection,
         queryBuilder: query,
-        builder: (data, documentID) => modelFromData,
+        builder: modelFromData,
+        // sort: (lhs, rhs) => rhs.start.compareTo(lhs.start),
+      );
+
+  Future<List<T>> collection(
+          {required String pathToCollection,
+          required T Function(Map<String, dynamic>? data, String documentID)
+              modelFromData,
+          Query<Map<String, dynamic>>? Function(Query<Map<String, dynamic>>)?
+              query}) =>
+      _service.collection<T>(
+        path: pathToCollection,
+        queryBuilder: query,
+        builder: modelFromData,
         // sort: (lhs, rhs) => rhs.start.compareTo(lhs.start),
       );
 }
