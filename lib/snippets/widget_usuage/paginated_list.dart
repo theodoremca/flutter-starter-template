@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:fsk/utils/colors.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-import 'package:talk_tailor_app/utils/colors.dart';
+
 
 class PaginatedListWidget<T> extends ConsumerStatefulWidget {
   final void Function(int)? setScrollPosition;
@@ -79,11 +80,11 @@ class _PaginatedListState extends ConsumerState<PaginatedListWidget> {
         if (widget.isFetch)
           Align(
             child:
-                LinearProgressIndicator(color: widget.color ?? AppColors.brown),
+                LinearProgressIndicator(color: widget.color ?? AppColors.primary),
             alignment: Alignment.bottomCenter,
           ),
         RefreshIndicator(
-          color: widget.color ?? AppColors.brown,
+          color: widget.color ?? AppColors.primary,
           onRefresh: widget.onRefresh,
           child: ScrollablePositionedList.builder(
               itemCount: widget.data?.length ?? 0,

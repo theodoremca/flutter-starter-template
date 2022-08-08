@@ -1,6 +1,7 @@
-import 'package:atlanta/ui/utils/defaults.dart';
-import 'package:atlanta/ui/widgets/styled_text.dart';
+
 import 'package:flutter/material.dart';
+import 'package:fsk/common_widgets/text_widgets.dart';
+import 'package:fsk/utils/colors.dart';
 
 class CustomDropdownButton extends StatefulWidget {
   final dynamic value;
@@ -26,10 +27,10 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
   @override
   Widget build(BuildContext context) {
     return DropdownButton(
-        hint: const StyledText(text: 'choose category'),
+        hint:regularText( 'choose category'),
         underline: const SizedBox(),
         alignment: Alignment.centerLeft,
-        style: const TextStyle(color: primary),
+        style: const TextStyle(color: AppColors.primary),
         elevation: 0,
         value: widget.value,
         items: widget.menuItems,

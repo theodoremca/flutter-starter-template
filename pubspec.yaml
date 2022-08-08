@@ -1,48 +1,48 @@
 name: fsk
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
 dependencies:
-  flutter:
-    sdk: flutter
+  another_flushbar: ^1.10.20
+  cloud_firestore: ^3.1.18
+  concentric_transition: ^1.0.1
   cupertino_icons: ^1.0.2
-  flutter_svg: ^1.0.0
-  flutter_screenutil: ^5.0.1+2
+  dio: ^4.0.4
   equatable: ^2.0.3
   firebase_auth: ^3.4.2
-  cloud_firestore: ^3.1.18
   firebase_core: ^1.19.2
-  concentric_transition: ^1.0.1
-  smooth_page_indicator: ^1.0.0+2
-  google_fonts: ^2.1.0
-  proste_route_animation: ^2.0.2
-  dio: ^4.0.4
+  firebase_dynamic_links: ^4.3.2
+  flutter:
+    sdk: flutter
   flutter_riverpod: ^1.0.3
+  flutter_screenutil: ^5.0.1+2
+  flutter_svg: ^1.0.0
+  flutter_web_frame: ^0.0.3
+  get_it: ^7.2.0
+  go_router: ^3.0.6
+  google_fonts: ^2.1.0
   hive: ^2.0.4
   hive_flutter: ^1.0.0
   intl: ^0.17.0
-  get_it: ^7.2.0
-  another_flushbar: ^1.10.20
-  pinput: ^1.1.0
-  modal_bottom_sheet: ^2.0.0
-  shared_preferences: ^2.0.13
   material_design_icons_flutter: ^5.0.659
-  firebase_dynamic_links: ^4.3.2
+  modal_bottom_sheet: ^2.0.0
   photo_view: ^0.14.0
-  go_router: ^3.0.6
-  flutter_web_frame: ^0.0.3
-  tab_container: ^2.0.0
-  timer_count_down: ^2.2.
+  pinput: ^1.1.0
+  proste_route_animation: ^2.0.2
   scrollable_positioned_list: ^0.3.2
+  shared_preferences: ^2.0.13
+  smooth_page_indicator: ^1.0.0+2
+  tab_container: ^2.0.0
+  timer_count_down: ^2.2.1
 
 dev_dependencies:
+  flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
 
 flutter:
   uses-material-design: true
