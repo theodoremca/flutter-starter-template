@@ -10,6 +10,7 @@ class PaginatedListWidget<T> extends ConsumerStatefulWidget {
   final void Function(int)? handleScrollWithIndex;
   final int? initialIndex;
   final Widget Function(int) itemBuilder;
+    final Widget? loadingIndicator;
   final Future Function() onRefresh;
   final bool isFetch;
   final List<T>? data;
@@ -22,6 +23,7 @@ class PaginatedListWidget<T> extends ConsumerStatefulWidget {
       required this.onRefresh,
       required this.itemBuilder,
       required this.isFetch,
+        this.loadingIndicator,
       this.color,
       Key? key})
       : super(key: key);
@@ -78,7 +80,7 @@ class _PaginatedListState extends ConsumerState<PaginatedListWidget> {
     return Stack(
       children: [
         if (widget.isFetch)
-          Align(
+                  widget.loadingIndicator ??  Align(
             child:
                 LinearProgressIndicator(color: widget.color ?? AppColors.primary),
             alignment: Alignment.bottomCenter,
